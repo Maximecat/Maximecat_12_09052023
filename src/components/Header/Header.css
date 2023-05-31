@@ -1,9 +1,14 @@
 .headerLayout {
     display: flex;
-    height: 42px;
+    height: 75px;
     background-color: black;
     align-items: center;
     justify-content: space-around;
+}
+
+.headerLogo {
+    height: 40px;
+    margin-left: -50px;
 }
 
 .headerLayout a {
