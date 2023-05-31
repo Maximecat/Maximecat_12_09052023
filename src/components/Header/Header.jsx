@@ -5,11 +5,11 @@ function Header() {
 
     return (
         <header className='headerLayout'>
-            <img src={logo} alt="Logo Sportsee" />
-            <a href='#' alt="achanger">Acceuil</a>
-            <a href='#' alt="achangedfr">Profil</a>
-            <a href='#' alt="achangfeer">Réglage</a>
-            <a href='#' alt="achangfeffer">Communauté</a>
+            <img className='headerLogo' src={logo} alt="Logo Sportsee" />
+            <a href='#' alt="Page d'acceuil">Acceuil</a>
+            <a href='#' alt="Page Profil">Profil</a>
+            <a href='#' alt="Réglage">Réglage</a>
+            <a href='#' alt="Communauté">Communauté</a>
         </header>
     )
 }
