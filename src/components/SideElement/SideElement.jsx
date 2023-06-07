@@ -4,7 +4,7 @@ function SideElement({ logoUrl }) {
 
     return (
         <div className='box-SideElement'>
-            <img className='logo-SideElement' src={logoUrl} alt="logo" />
+            <img className='sideElement-image' src={logoUrl} alt="logo" />
         </div>
     )
 }
