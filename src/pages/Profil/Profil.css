@@ -1,0 +1,32 @@
+.profil-main {
+    width: 100%;
+    display: block;
+    margin: 30px 45px;
+}
+
+.profil-name {
+    color: #FF0101;
+}
+
+.profil-datas-container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 55px;
+}
+
+.graphic-container {
+    width: 75%;
+}
+
+.datas-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 30px;
+}
+
+.graphic-container,
+.datas-container {
+    height: 100%;
+}
