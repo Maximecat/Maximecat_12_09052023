@@ -1,4 +1,7 @@
 .box-SideElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     border-radius: 5px;
     width: 45px;
@@ -6,4 +9,6 @@
     margin-bottom: 15px;
 }
 
-.logo-SideElement {}
+.sideElement-image {
+    width: 25px;
+}
