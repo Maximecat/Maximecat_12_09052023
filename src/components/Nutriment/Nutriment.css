@@ -1,0 +1,55 @@
+.nutriment-card {
+    display: flex;
+    background-color: #FBFBFB;
+    gap: 16px;
+    padding: 20px 25px;
+    border-radius: 5px;
+}
+
+.nutriment-logo {
+    width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.nutriment-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.nutriment-p {
+    margin: 0;
+}
+
+.nutriment-bold {
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.logo-flamme {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.07);
+}
+
+.logo-chicken {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(74, 184, 255, 0.1);
+}
+
+.logo-apple {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(249, 206, 35, 0.1);
+}
+
+.logo-cheeseburger {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(253, 81, 129, 0.1);
+}
