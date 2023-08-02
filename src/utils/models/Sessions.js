@@ -1,12 +1,31 @@
-class Sessions {
+class Session {
     day;
     sessionLength;
 
     constructor(data) {
-        // Méthode de récupération du jour à changer //
-        this.day = data.sessions.day;
-        this.kilogram = data.sessions.sessionLength;
+        this.day = data.day;
+        this.sessionLength = Number(data.sessionLength);
+    }
+
+    get formatedDay() {
+        switch (this.day) {
+            case 1:
+                return "L"
+            case 2:
+            case 3:
+                return "M"
+            case 4:
+                return "J"
+            case 5:
+                return "V"
+            case 6:
+                return "S"
+            case 7:
+                return "D"
+            default:
+                return ""
+        }
     }
 }
 
-export default Sessions
+export default Session
