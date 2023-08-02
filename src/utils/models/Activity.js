@@ -1,13 +1,16 @@
 class Activity {
-    day;
+    date;
     kilogram;
     calories;
 
     constructor(data) {
-        // Méthode de récupération du jour à changer //
-        this.day = data.sessions.day;
-        this.kilogram = data.sessions.kilogram;
-        this.calories = data.sessions.calories;
+        this.date = new Date(data.day);
+        this.kilogram = Number(data.kilogram);
+        this.calories = Number(data.calories);
+    }
+
+    get day() {
+        return this.date.getDate()
     }
 }
 
