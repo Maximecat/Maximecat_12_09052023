@@ -15,10 +15,52 @@
     margin-top: 55px;
 }
 
-.graphic-container {
-    width: 75%;
+/* */
+.charts-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
 }
 
+.first-chart {
+    width: 100%;
+    height: 55%;
+    border-radius: 5px;
+    /* border: 1px solid red; */
+    background-color: #FBFBFB;
+    font-size: 13px;
+}
+
+.second-charts-container {
+    width: 100%;
+    height: 45%;
+    gap: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.second-chart {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid red;
+    background-color: #FF0000;
+}
+
+.third-chart {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.fourth-chart {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+/* */
 .datas-container {
     display: flex;
     flex-direction: column;
