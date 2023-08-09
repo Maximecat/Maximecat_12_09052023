@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState, useMemo } from 'react';
 import User from '../../utils/models/User';
 import ApiService from '../../utils/services/ApiService';
-import { BarChart, LineChart, RadarChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, LineChart, RadarChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PolarGrid, ResponsiveContainer, PolarAngleAxis, Radar, PieChart, Pie, Cell } from 'recharts';
 
 function Profil() {
     const { id } = useParams();
@@ -80,24 +80,36 @@ function Profil() {
                     </div>
                     <div className='second-charts-container'>
                         <div className='second-chart'>
-                            <ResponsiveContainer>
+                            <ResponsiveContainer width={200}>
                                 <LineChart data={averageSessions}>
                                     <CartesianGrid horizontal={false} vertical={false} />
-                                    <XAxis dataKey='formatedDay' axisLine={false} tickSize={0} padding={{ left: 10, right: 10 }} fontSize={9} />
                                     <Line dataKey='sessionLength' type="natural" dot={false} stroke='white' />
+                                    <XAxis dataKey='formatedDay' axisLine={false} tickSize={0} padding={{ left: -5, right: -5 }} fontSize={9} />
                                     <Legend content={() => "Durée moyenne des sessions"} verticalAlign="top" align='left' height={80} width={120} wrapperStyle={{ color: 'white', opacity: 0.5, marginTop: 20, marginLeft: 20 }} />
                                     <Tooltip />
                                 </LineChart>
                             </ResponsiveContainer>
                         </div>
                         <div className='third-chart'>
-                            <ResponsiveContainer>
+                            <ResponsiveContainer width={200}>
                                 <RadarChart data={performances}>
-
+                                    <PolarGrid />
+                                    <PolarAngleAxis dataKey="kind" tickLine={false} stroke='white' fontSize={10} />
+                                    <Radar dataKey="value" fill="#FF0101" fillOpacity={0.6} />
                                 </RadarChart>
                             </ResponsiveContainer>
                         </div>
-                        <div className='fourth-chart'></div>
+                        <div className='fourth-chart'>
+                            <ResponsiveContainer width={200} >
+                                <PieChart>
+                                    <Pie data={user.scoreOftheDay} dataKey='todayScore' innerRadius={60} cornerRadius='50%'>
+                                        <Cell fill="#FF0000" stroke="#FF0000" />
+                                        <Cell fill="#FFF" stroke="#FFF" />
+                                    </Pie>
+                                </PieChart>
+                            </ResponsiveContainer>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
                 <div className='datas-container'>
