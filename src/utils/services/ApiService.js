@@ -47,9 +47,8 @@ class ApiService {
         try {
             const response = await fetch(`${this.apiAdress}${userId}/performance`)
             const { data } = await response.json()
-            console.log(data, data.kind, data.data)
 
-            return data.datas.map((data) => new Performance(data));
+            return data.data.map((perf) => new Performance(perf, data.kind));
         } catch (error) {
             return error
         }
