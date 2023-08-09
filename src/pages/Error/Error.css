@@ -1,0 +1,38 @@
+.error-component {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+}
+
+.error-title {
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    color: rgb(170, 169, 169);
+}
+
+.error {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.error-code {
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+.backhome-sentence {
+    font-size: 15px;
+}
+
+.backhome-link {
+    text-decoration: none;
+    color: red;
+}
