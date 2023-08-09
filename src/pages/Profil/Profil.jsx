@@ -102,9 +102,9 @@ function Profil() {
                         <div className='fourth-chart'>
                             <ResponsiveContainer width={200} >
                                 <PieChart>
-                                    <Pie data={user.scoreOftheDay} dataKey='todayScore' innerRadius={60} cornerRadius='50%'>
+                                    <Pie data={user.scoreOftheDay} dataKey='todayScore' innerRadius={66} startAngle={90} cornerRadius='50%'>
                                         <Cell fill="#FF0000" stroke="#FF0000" />
-                                        <Cell fill="#FFF" stroke="#FFF" />
+                                        <Cell fill="transparent" stroke="transparent" />
                                     </Pie>
                                 </PieChart>
                             </ResponsiveContainer>
