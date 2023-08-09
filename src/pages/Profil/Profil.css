@@ -44,20 +44,20 @@
     width: 100%;
     border-radius: 5px;
     font-size: 12px;
-    border: 1px solid red;
     background-color: #FF0000;
 }
 
 .third-chart {
     width: 100%;
     border-radius: 5px;
-    border: 1px solid red;
+    background-color: #282D30;
 }
 
 .fourth-chart {
     width: 100%;
     border-radius: 5px;
     border: 1px solid red;
+    background-color: #FBFBFB;
 }
 
 /* */
