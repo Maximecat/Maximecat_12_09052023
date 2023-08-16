@@ -9,6 +9,8 @@ import { useEffect, useState, useMemo } from 'react';
 import User from '../../utils/models/User';
 import ApiService from '../../utils/services/ApiService';
 import { BarChart, LineChart, RadarChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PolarGrid, ResponsiveContainer, PolarAngleAxis, Radar, PieChart, Pie, Cell } from 'recharts';
+import BarChartTooltip from '../../components/BarChartTooltip/BarChartTooltip';
+import LinearChartTooltip from '../../components/LinearChartTooltip/LinearChartTooltip';
 
 function Profil() {
     const { id } = useParams();
@@ -61,54 +63,64 @@ function Profil() {
 
     return (
         <div className='profil-main'>
-            <h1>Bonjour <span className='profil-name'>{user.firstName}</span></h1>
-            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+            <h1 className='personnal-welcome'>Bonjour <span className='profil-name'>{user.firstName}</span></h1>
+            <p className='personnal-sentence'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             <div className='profil-datas-container'>
                 <div className='charts-container'>
                     <div className='first-chart'>
-                        <ResponsiveContainer width={600} height={230}>
+                        <p className='bar-label'>Activité quotidienne</p>
+                        <ResponsiveContainer height={230}>
                             <BarChart data={activities} margin={{ left: 40, top: 10 }} barGap={6} >
                                 <CartesianGrid strokeDasharray={2} horizontal={true} vertical={false} strokeWidth={0.5} />
-                                <Bar dataKey='kilogram' name='Poids (kg)' radius={[5, 5, 0, 0]} barSize={7} />
-                                <Bar dataKey='calories' name='Calories Brûlées (kCal)' radius={[5, 5, 0, 0]} barSize={7} fill='red' />
-                                <XAxis dataKey='day' tickSize={0} tickMargin={20} strokeWidth={0.2} fillOpacity={0.8} padding={{ left: -30, right: -30 }} />
-                                <YAxis orientation='right' tickMargin={30} strokeWidth={0} />
-                                <Legend verticalAlign="top" align='right' iconType='circle' iconSize={7} height={60} wrapperStyle={{ lineHeight: '40px', marginRight: -10, fontWeight: '600', color: '#74798C' }} />
-                                <Tooltip />
+                                <Bar dataKey='kilogram' name='Poids (kg)' radius={[5, 5, 0, 0]} barSize={7} fill='#282D30' />
+                                <Bar dataKey='calories' name='Calories Brûlées (kCal)' radius={[5, 5, 0, 0]} barSize={7} fill='#E60000' />
+                                <XAxis dataKey='day' tickSize={0} tickMargin={20} strokeWidth={0.2} fillOpacity={0.8} padding={{ left: -40, right: -40 }} />
+                                <YAxis orientation='right' tickMargin={10} strokeWidth={0} />
+                                <Legend verticalAlign="top" align='right' iconType='circle' iconSize={6} height={60} wrapperStyle={{ lineHeight: '40px', marginRight: 20, fontWeight: '600', fontSize: '11px' }} />
+                                <Tooltip content={<BarChartTooltip />} />
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
                     <div className='second-charts-container'>
                         <div className='second-chart'>
-                            <ResponsiveContainer width={200}>
+                            <ResponsiveContainer>
                                 <LineChart data={averageSessions}>
+                                    <Legend content={() => "Durée moyenne des sessions"} verticalAlign="top" align='left' height={50} width={120} wrapperStyle={{ color: 'white', opacity: 0.5, marginTop: 20, marginLeft: 20 }} />
                                     <CartesianGrid horizontal={false} vertical={false} />
-                                    <Line dataKey='sessionLength' type="natural" dot={false} stroke='white' />
-                                    <XAxis dataKey='formatedDay' axisLine={false} tickSize={0} padding={{ left: -5, right: -5 }} fontSize={9} />
-                                    <Legend content={() => "Durée moyenne des sessions"} verticalAlign="top" align='left' height={80} width={120} wrapperStyle={{ color: 'white', opacity: 0.5, marginTop: 20, marginLeft: 20 }} />
-                                    <Tooltip />
+                                    <Line dataKey='sessionLength' type="basis" dot={false} stroke='white' />
+                                    <XAxis dataKey='formatedDay' axisLine={false} tickSize={0} fontSize={9} padding={{ left: 10, right: 10 }} stroke='white' opacity={0.5} />
+                                    <Tooltip content={<LinearChartTooltip />} />
                                 </LineChart>
                             </ResponsiveContainer>
                         </div>
                         <div className='third-chart'>
-                            <ResponsiveContainer width={200}>
+                            <ResponsiveContainer>
                                 <RadarChart data={performances}>
                                     <PolarGrid />
-                                    <PolarAngleAxis dataKey="kind" tickLine={false} stroke='white' fontSize={10} />
+                                    <PolarAngleAxis dataKey="kind" tickLine={false} stroke='#FFFFFF' fontSize={10} />
                                     <Radar dataKey="value" fill="#FF0101" fillOpacity={0.6} />
+                                    <Tooltip />
                                 </RadarChart>
                             </ResponsiveContainer>
                         </div>
                         <div className='fourth-chart'>
-                            <ResponsiveContainer width={200} >
+                            <ResponsiveContainer>
                                 <PieChart>
-                                    <Pie data={user.scoreOftheDay} dataKey='todayScore' innerRadius={66} startAngle={90} cornerRadius='50%'>
+                                    <Legend content={() => "Score"} verticalAlign="top" align='left' wrapperStyle={{ color: '#20253A', fontFamily: 'Roboto', fontSize: 12, fontWeight: 600, marginTop: 15, marginLeft: 20 }} />
+                                    <Pie data={user.scoreOftheDay} dataKey={'todayScore'} innerRadius={66} startAngle={90} endAngle={450} cornerRadius='50%'>
                                         <Cell fill="#FF0000" stroke="#FF0000" />
                                         <Cell fill="transparent" stroke="transparent" />
                                     </Pie>
+                                    <Tooltip />
                                 </PieChart>
                             </ResponsiveContainer>
-                            <p></p>
+                            <div className='score-label'>
+                                <span className='score'>{user.todayScore || user.score}%</span>
+                                <p className='score-fade'>
+                                    de votre
+                                    <br />objectif
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
