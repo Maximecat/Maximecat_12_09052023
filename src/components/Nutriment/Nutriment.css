@@ -2,7 +2,7 @@
     display: flex;
     background-color: #FBFBFB;
     gap: 16px;
-    padding: 20px 25px;
+    padding: 20px 10px;
     border-radius: 5px;
 }
 
@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    margin-left: 4px;
 }
 
 .nutriment-text-box {
@@ -23,11 +24,15 @@
 
 .nutriment-p {
     margin: 0;
+    color: #74798C;
+    font-size: 11px;
 }
 
 .nutriment-bold {
     margin-bottom: 3px;
     font-weight: bold;
+    color: #282D30;
+    font-size: 16px;
 }
 
 .logo-flamme {
