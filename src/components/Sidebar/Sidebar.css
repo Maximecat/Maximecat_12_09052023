@@ -1,13 +1,17 @@
 .asideLayout {
     display: flex;
     flex-direction: column;
-    width: 75px;
+    width: 78px;
     background-color: black;
-    justify-content: space-evenly;
 }
 
 .container-SideElement {
     margin: 15px;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .aside-Copyright {
