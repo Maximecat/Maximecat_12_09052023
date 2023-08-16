@@ -1,6 +1,7 @@
 class User {
     firstName;
     todayScore;
+    score;
     calorieCount;
     proteinCount;
     carbohydrateCount;
@@ -9,6 +10,7 @@ class User {
     constructor(data) {
         this.firstName = data.userInfos.firstName;
         this.todayScore = data.todayScore * 100;
+        this.score = data.score * 100;
         this.calorieCount = data.keyData.calorieCount;
         this.proteinCount = data.keyData.proteinCount;
         this.carbohydrateCount = data.keyData.carbohydrateCount;
@@ -18,10 +20,10 @@ class User {
     get scoreOftheDay() {
         return [
             {
-                todayScore: this.todayScore
+                todayScore: this.todayScore || this.score
             },
             {
-                todayScore: 100 - this.todayScore
+                todayScore: 100 - this.todayScore || 100 - this.score
             },
         ]
     }
