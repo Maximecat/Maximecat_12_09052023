@@ -1,18 +1,27 @@
 .profil-main {
     width: 100%;
     display: block;
-    margin: 30px 45px;
+    padding: 10px
+}
+
+.personnal-welcome {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .profil-name {
     color: #FF0101;
 }
 
+.personnal-sentence {
+    font-size: 15px;
+}
+
 .profil-datas-container {
     width: 100%;
     display: flex;
     gap: 20px;
-    margin-top: 55px;
+    margin-top: 50px;
 }
 
 /* */
@@ -24,40 +33,74 @@
 }
 
 .first-chart {
+    position: relative;
     width: 100%;
     height: 55%;
     border-radius: 5px;
-    /* border: 1px solid red; */
     background-color: #FBFBFB;
     font-size: 13px;
 }
 
+.bar-label {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
 .second-charts-container {
-    width: 100%;
-    height: 45%;
+    height: 43%;
     gap: 25px;
     display: flex;
     flex-direction: row;
 }
 
 .second-chart {
-    width: 100%;
+    flex: 1;
     border-radius: 5px;
     font-size: 12px;
     background-color: #FF0000;
 }
 
 .third-chart {
-    width: 100%;
+    flex: 1;
     border-radius: 5px;
     background-color: #282D30;
 }
 
 .fourth-chart {
-    width: 100%;
+    flex: 1;
+    position: relative;
     border-radius: 5px;
-    border: 1px solid red;
     background-color: #FBFBFB;
+}
+
+.score-label {
+    width: 129px;
+    height: 93px;
+    position: absolute;
+    text-align: center;
+    padding-top: 36px;
+    top: 21%;
+    left: 21%;
+    background: white;
+    border-radius: 90px;
+}
+
+.score {
+    color: #282D30;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.score-fade {
+    margin-top: 5px;
+    line-height: 20px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 600;
+    color: #74798C;
 }
 
 /* */
