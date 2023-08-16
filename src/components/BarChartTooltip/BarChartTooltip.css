@@ -1,0 +1,10 @@
+.custom-barchart-tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8px;
+    padding: 6px;
+    background-color: #E60000 !important;
+    color: white;
+}
