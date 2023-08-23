@@ -1,0 +1,9 @@
+.third-chart {
+    flex: 1;
+    border-radius: 5px;
+    background-color: #282D30;
+}
+
+.recharts-polar-grid-angle line {
+    display: none;
+}
