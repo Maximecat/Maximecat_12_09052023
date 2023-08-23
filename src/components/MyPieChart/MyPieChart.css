@@ -1,0 +1,42 @@
+.fourth-chart {
+    flex: 1;
+    position: relative;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+}
+
+.score {
+    color: #282D30;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.score-fade {
+    margin-top: 5px;
+    line-height: 20px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 600;
+    color: #74798C;
+}
+
+@media screen and (max-device-width: 1920px) {
+
+    .score-label {
+        width: 129px;
+        height: 93px;
+        position: absolute;
+        text-align: center;
+        padding-top: 36px;
+        top: 21%;
+        left: 37%;
+        background: white;
+        border-radius: 90px;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    .score-label {
+        left: 21%;
+    }
+}
