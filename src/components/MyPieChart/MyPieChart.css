@@ -35,6 +35,12 @@
     }
 }
 
+@media screen and (max-device-width: 1440px) {
+    .score-label {
+        left: 31%;
+    }
+}
+
 @media screen and (max-device-width: 1024px) {
     .score-label {
         left: 21%;
