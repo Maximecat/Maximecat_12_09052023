@@ -1,6 +1,7 @@
 import './App.css';
-import Avatar from '../Profil/Avatar.png'
+import Avatar from '../../assets/Avatar.png'
 
+// Page d'acceuil
 function App() {
   return (
     <div className="App">
