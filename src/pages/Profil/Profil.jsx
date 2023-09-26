@@ -1,9 +1,9 @@
 import './Profil.css';
 import Nutriment from '../../components/Nutriment/Nutriment';
-import Flamme from './Flamme.png';
-import Chicken from './Chicken.png';
-import Apple from './Apple.png';
-import Cheeseburger from './Cheeseburger.png';
+import Flamme from '../../assets/Flamme.png';
+import Chicken from '../../assets/Chicken.png';
+import Apple from '../../assets/Apple.png';
+import Cheeseburger from '../../assets/Cheeseburger.png';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState, useMemo } from 'react';
 import User from '../../utils/models/User';
@@ -13,9 +13,12 @@ import MyLineChart from '../../components/MyLineChart/MyLineChart';
 import MyRadarChart from '../../components/MyRadarChart/MyRadarChart';
 import MyPieChart from '../../components/MyPieChart/MyPieChart';
 
+// Page Profil
 function Profil() {
+    // Récupération id par l'url
     const { id } = useParams();
 
+    // Création des states pour acceuilir les datas
     const [user, setUser] = useState(new User({
         userInfos: {},
         keyData: {}
@@ -29,6 +32,7 @@ function Profil() {
 
     const datasService = useMemo(() => new ApiService(), [])
 
+    // Récupération des datas
     useEffect(() => {
         async function getDatas() {
             const user = await datasService.getUserInformations(id)
@@ -74,7 +78,7 @@ function Profil() {
                         <MyPieChart user={user} />
                     </div>
                 </div>
-                <div className='datas-container'>
+                <div className='nutriment-container'>
                     <Nutriment image={Flamme} background="logo-flamme" value={user.calorieCount + "kCal"} unit="Calories" />
                     <Nutriment image={Chicken} background="logo-chicken" value={user.proteinCount + "g"} unit="Proteines" />
                     <Nutriment image={Apple} background="logo-apple" value={user.carbohydrateCount + "g"} unit="Glucides" />
