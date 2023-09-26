@@ -2,6 +2,7 @@ import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAx
 import BarChartTooltip from "../BarChartTooltip/BarChartTooltip";
 import './MyBarChart.css'
 
+// BarChart
 function MyBarChart({ activities }) {
     return (
         <div className='first-chart'>
