@@ -1,8 +1,8 @@
 import './Header.css'
 import logo from '../../assets/logo-sportsee.png'
 
+// Header
 function Header() {
-
     return (
         <header className='headerLayout'>
             <img className='headerLogo' src={logo} alt="Logo Sportsee" />
