@@ -1,3 +1,4 @@
+/* Box SideElement */
 .box-SideElement {
     display: flex;
     align-items: center;
@@ -9,6 +10,7 @@
     margin-bottom: 15px;
 }
 
+/* Logo SideElement */
 .sideElement-image {
     width: 25px;
 }
