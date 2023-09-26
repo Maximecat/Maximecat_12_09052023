@@ -1,8 +1,8 @@
 import './BarChartTooltip.css'
 
+// Tooltip BarChart personnalisé
 const BarChartTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
-        console.log(payload)
         return (
             <div className="custom-barchart-tooltip">
                 <p>{payload[0].value} kg</p>
