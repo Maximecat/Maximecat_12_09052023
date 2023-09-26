@@ -1,6 +1,7 @@
-import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { Cell, Legend, Pie, PieChart, ResponsiveContainer } from 'recharts';
 import './MyPieChart.css'
 
+// PieChart
 function MyPieChart({ user }) {
     return (
         <div className='fourth-chart'>
@@ -11,7 +12,6 @@ function MyPieChart({ user }) {
                         <Cell fill="#FF0000" stroke="#FF0000" />
                         <Cell fill="transparent" stroke="transparent" />
                     </Pie>
-                    <Tooltip />
                 </PieChart>
             </ResponsiveContainer>
             <div className='score-label'>
