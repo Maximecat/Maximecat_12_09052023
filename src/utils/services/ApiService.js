@@ -3,10 +3,12 @@ import Activity from "../models/Activity";
 import Session from "../models/Sessions";
 import Performance from "../models/Performance";
 
+// Class de récuparation des datas
 class ApiService {
     apiAdress;
     isMock;
 
+    // Mock datas
     constructor() {
         this.isMock = false;
         if (this.isMock === false) {
@@ -16,6 +18,7 @@ class ApiService {
         }
     }
 
+    // Récupération informations utilisateurs
     async getUserInformations(userId) {
         try {
             const response = await fetch(`${this.apiAdress}${this.isMock ? "index.json" : userId}`)
@@ -27,6 +30,7 @@ class ApiService {
         }
     }
 
+    // Récupération des informations sur les activités des utilisateurs
     async getUserActivities(userId) {
         try {
             const response = await fetch(`${this.apiAdress}${this.isMock ? "activity.json" : userId + "/activity"}`)
@@ -38,6 +42,7 @@ class ApiService {
         }
     }
 
+    // Récupération des informations sur les sessions moyennes des utilisateurs
     async getUserAverageSessions(userId) {
         try {
             const response = await fetch(`${this.apiAdress}${this.isMock ? "average-sessions.json" : userId + "/average-sessions"}`)
@@ -49,6 +54,7 @@ class ApiService {
         }
     }
 
+    // Récupération des informations sur les performances des utilisateurs
     async getUserPerformances(userId) {
         try {
             const response = await fetch(`${this.apiAdress}${this.isMock ? "performance.json" : userId + "/performance"}`)
