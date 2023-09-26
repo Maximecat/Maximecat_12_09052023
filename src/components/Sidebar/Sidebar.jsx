@@ -5,6 +5,7 @@ import swimming from '../../assets/swimming.png';
 import bike from '../../assets/bike.png';
 import dumbbell from '../../assets/dumbbell.png'
 
+// SideBar
 function Sidebar() {
 
     return (
