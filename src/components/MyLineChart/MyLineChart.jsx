@@ -1,7 +1,8 @@
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
-import LinearChartTooltip from '../LinearChartTooltip/LinearChartTooltip';
+import LineChartTooltip from '../LineChartTooltip/LineChartTooltip';
 import './MyLineChart.css'
 
+// LineChart
 function MyLineChart({ averageSessions }) {
     return (
         <div className='second-chart'>
@@ -11,7 +12,7 @@ function MyLineChart({ averageSessions }) {
                     <CartesianGrid horizontal={false} vertical={false} />
                     <Line dataKey='sessionLength' type="basis" dot={false} stroke='white' />
                     <XAxis dataKey='formatedDay' axisLine={false} tickSize={0} fontSize={9} padding={{ left: 10, right: 10 }} stroke='white' opacity={0.5} />
-                    <Tooltip content={<LinearChartTooltip />} />
+                    <Tooltip content={<LineChartTooltip />} />
                 </LineChart>
             </ResponsiveContainer>
         </div>
