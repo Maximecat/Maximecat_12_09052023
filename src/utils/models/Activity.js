@@ -1,3 +1,4 @@
+// Model class Activity
 class Activity {
     date;
     kilogram;
@@ -9,6 +10,7 @@ class Activity {
         this.calories = Number(data.calories);
     }
 
+    // Récupération de la date
     get day() {
         return this.date.getDate()
     }
