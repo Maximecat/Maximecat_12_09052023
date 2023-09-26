@@ -1,3 +1,4 @@
+/* SideBar */
 .asideLayout {
     display: flex;
     flex-direction: column;
@@ -5,6 +6,7 @@
     background-color: black;
 }
 
+/* SideElement container */
 .container-SideElement {
     margin: 15px;
     height: 82%;
@@ -14,6 +16,7 @@
     align-items: center;
 }
 
+/* SideBar copyright */
 .aside-Copyright {
     font-size: 10px;
     transform: rotate(270deg);
