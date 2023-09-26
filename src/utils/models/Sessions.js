@@ -1,3 +1,4 @@
+// Model class Session
 class Session {
     day;
     sessionLength;
@@ -7,6 +8,7 @@ class Session {
         this.sessionLength = Number(data.sessionLength);
     }
 
+    // Date reformaté avec initials
     get formatedDay() {
         switch (this.day) {
             case 1:
