@@ -1,3 +1,4 @@
+/* PieChart */
 .fourth-chart {
     flex: 1;
     position: relative;
@@ -5,12 +6,14 @@
     background-color: #FBFBFB;
 }
 
+/* Score */
 .score {
     color: #282D30;
     font-weight: 600;
     font-size: 20px;
 }
 
+/* Texte */
 .score-fade {
     margin-top: 5px;
     line-height: 20px;
@@ -28,8 +31,8 @@
         position: absolute;
         text-align: center;
         padding-top: 36px;
-        top: 21%;
-        left: 37%;
+        top: 22%;
+        left: 36.5%;
         background: white;
         border-radius: 90px;
     }
