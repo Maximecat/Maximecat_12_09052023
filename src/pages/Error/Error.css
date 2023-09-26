@@ -1,4 +1,5 @@
-.error-component {
+/* Page Error */
+.error-page {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,6 +8,7 @@
     font-family: 'Roboto';
 }
 
+/* Titre */
 .error-title {
     width: 100%;
     margin: 30px;
@@ -17,21 +19,25 @@
     color: rgb(170, 169, 169);
 }
 
+/* Message d'erreur */
 .error {
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
 }
 
+/* Code erreur */
 .error-code {
     margin-bottom: 50px;
     font-size: 15px;
 }
 
+/* Redirection page d'acceuil */
 .backhome-sentence {
     font-size: 15px;
 }
 
+/* Lien vers la page d'acceuil */
 .backhome-link {
     text-decoration: none;
     color: red;
