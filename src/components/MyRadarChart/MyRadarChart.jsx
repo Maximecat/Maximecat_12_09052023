@@ -1,6 +1,7 @@
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer, Tooltip } from 'recharts';
 import './MyRadarChart.css'
 
+// RadarChart
 function MyRadarChart({ performances }) {
     return (
         <div className='third-chart'>
