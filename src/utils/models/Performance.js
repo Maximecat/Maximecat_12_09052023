@@ -1,3 +1,4 @@
+// Model class Performance
 class Performance {
     value;
     kind;
@@ -8,6 +9,7 @@ class Performance {
         this.kind = this.translateKind(kind[data.kind]);
     }
 
+    // Traduction en into fr + changement d'ordre d'affichage
     translateKind(kind) {
         switch (kind) {
             case 'intensity':
