@@ -1,3 +1,4 @@
+/* BarChart */
 .first-chart {
     position: relative;
     width: 100%;
@@ -7,6 +8,7 @@
     font-size: 13px;
 }
 
+/* Titre au gauche */
 .bar-label {
     position: absolute;
     top: 10px;
@@ -15,6 +17,7 @@
     font-weight: 600;
 }
 
+/* Texte légende */
 .recharts-legend-item-text {
     color: #74798C !important;
 }
