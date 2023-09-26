@@ -1,3 +1,4 @@
+// Model class User
 class User {
     firstName;
     todayScore;
@@ -17,6 +18,7 @@ class User {
         this.lipidCount = data.keyData.lipidCount;
     }
 
+    // Récupération du score, 2 clefs différentes pour y accéder : this.todayScore et this.score
     get scoreOftheDay() {
         return [
             {
