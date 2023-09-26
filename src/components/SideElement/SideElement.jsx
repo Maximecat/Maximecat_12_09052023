@@ -1,5 +1,6 @@
 import './SideElement.css';
 
+// SideElement 
 function SideElement({ logoUrl }) {
 
     return (
