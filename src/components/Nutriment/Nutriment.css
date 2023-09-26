@@ -1,3 +1,4 @@
+/* Nutriment Card */
 .nutriment-card {
     display: flex;
     background-color: #FBFBFB;
@@ -6,6 +7,7 @@
     border-radius: 5px;
 }
 
+/* Logo */
 .nutriment-logo {
     width: 41px;
     display: flex;
@@ -15,19 +17,14 @@
     margin-left: 4px;
 }
 
+/* Nutriment infos */
 .nutriment-text-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-right: 20px;
 }
 
-.nutriment-p {
-    margin: 0;
-    color: #74798C;
-    font-size: 11px;
-}
-
+/* Nutriment value */
 .nutriment-bold {
     margin-bottom: 3px;
     font-weight: bold;
@@ -35,24 +32,35 @@
     font-size: 16px;
 }
 
+/* Nutriment unit */
+.nutriment-p {
+    margin: 0;
+    color: #74798C;
+    font-size: 11px;
+}
+
+/* Background logo : Flamme */
 .logo-flamme {
     width: 60px;
     height: 60px;
     background-color: rgba(255, 0, 0, 0.07);
 }
 
+/* Background logo : Poulet */
 .logo-chicken {
     width: 60px;
     height: 60px;
     background-color: rgba(74, 184, 255, 0.1);
 }
 
+/* Background logo : Poire */
 .logo-apple {
     width: 60px;
     height: 60px;
     background-color: rgba(249, 206, 35, 0.1);
 }
 
+/* Background logo : Chesseburger */
 .logo-cheeseburger {
     width: 60px;
     height: 60px;
