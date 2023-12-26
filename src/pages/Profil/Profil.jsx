@@ -4,7 +4,7 @@ import Flamme from '../../assets/Flamme.png';
 import Chicken from '../../assets/Chicken.png';
 import Apple from '../../assets/Apple.png';
 import Cheeseburger from '../../assets/Cheeseburger.png';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState, useMemo } from 'react';
 import User from '../../utils/models/User';
 import ApiService from '../../utils/services/ApiService';
@@ -17,6 +17,7 @@ import MyPieChart from '../../components/MyPieChart/MyPieChart';
 function Profil() {
     // Récupération id par l'url
     const { id } = useParams();
+    const navigate = useNavigate()
 
     // Création des states pour acceuilir les datas
     const [user, setUser] = useState(new User({
@@ -35,35 +36,51 @@ function Profil() {
     // Récupération des datas
     useEffect(() => {
         async function getDatas() {
-            const user = await datasService.getUserInformations(id)
-            setUser(user)
+            try {
+                const user = await datasService.getUserInformations(id)
+                setUser(user)
+            } catch (error) {
+                navigate("utilisateur-non-trouve")
+            }
         }
         getDatas()
-    }, [id, datasService])
+    }, [id, datasService, navigate])
 
     useEffect(() => {
         async function getDatasActivities() {
-            const activityDatas = await datasService.getUserActivities(id)
-            setActivities(activityDatas)
+            try {
+                const activityDatas = await datasService.getUserActivities(id)
+                setActivities(activityDatas)
+            } catch (error) {
+                navigate("utilisateur-non-trouve")
+            }
         }
         getDatasActivities()
-    }, [id, datasService])
+    }, [id, datasService, navigate])
 
     useEffect(() => {
         async function getDatasSessions() {
-            const averageSession = await datasService.getUserAverageSessions(id)
-            setAverageSessions(averageSession)
+            try {
+                const averageSession = await datasService.getUserAverageSessions(id)
+                setAverageSessions(averageSession)
+            } catch (error) {
+                navigate("utilisateur-non-trouve")
+            }
         }
         getDatasSessions()
-    }, [id, datasService])
+    }, [id, datasService, navigate])
 
     useEffect(() => {
         async function getDatasPerformances() {
-            const performanceDatas = await datasService.getUserPerformances(id)
-            setPerformances(performanceDatas)
+            try {
+                const performanceDatas = await datasService.getUserPerformances(id)
+                setPerformances(performanceDatas)
+            } catch (error) {
+                navigate("utilisateur-non-trouve")
+            }
         }
         getDatasPerformances()
-    }, [id, datasService])
+    }, [id, datasService, navigate])
 
     return (
         <div className='profil-main'>
