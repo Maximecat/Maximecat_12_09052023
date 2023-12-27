@@ -19,7 +19,7 @@ function Profil() {
     const { id } = useParams();
     const navigate = useNavigate()
 
-    // Création des states pour acceuilir les datas
+    // Création des states pour accueilir les datas
     const [user, setUser] = useState(new User({
         userInfos: {},
         keyData: {}
