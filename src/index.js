@@ -9,7 +9,7 @@ import Error from './pages/Error/Error';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 
-// Route : page d'acceuil, page profil, page d'erreur | Header, Sidebar sur chaques pages
+// Route : page d'accueil, page profil, page d'erreur | Header, Sidebar sur chaques pages
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
