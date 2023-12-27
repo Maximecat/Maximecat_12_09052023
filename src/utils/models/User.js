@@ -16,7 +16,7 @@ class User {
         this.lipidCount = data.keyData.lipidCount;
     }
 
-    // Récupération du score, 2 clefs différentes pour y accéder : this.todayScore et this.score
+    // Récupération du score
     get scoreOftheDay() {
         return [
             {
